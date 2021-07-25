@@ -1,6 +1,6 @@
 {
-  "name": "vtk.js",
-  "version": "0.0.0-semantically-release",
+  "name": "@acransac/vtk.js",
+  "version": "16.14.0-100",
   "description": "Visualization Toolkit for the Web",
   "keywords": [
     "3d",

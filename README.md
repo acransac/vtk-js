@@ -13,6 +13,12 @@
 Introduction
 ============
 
+**[This is a fork](https://github.com/Kitware/vtk-js). All credits and copyright go to the original authors and maintainers.**
+
+**See the license file in the repository or distributed with the npm package.**
+
+This fork is based on VTK 16, before the introduction of ESM modules and subsequent breaking changes. It aims to allow the use of some pieces of VTK in a web worker context.
+
 VTK is an open-source software system for image processing, 3D
 graphics, volume rendering and visualization. VTK includes many
 advanced algorithms (e.g., surface reconstruction, implicit modelling,
