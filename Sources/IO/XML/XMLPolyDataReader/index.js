@@ -96,11 +96,23 @@ function vtkXMLPolyDataReader(publicAPI, model) {
     const pieces = datasetElem.getElementsByTagName('Piece');
     const nbPieces = pieces.length;
 
+    function* iterableNodeList(nodeList) {
+      let index = 0;
+
+      while (index < nodeList.length) {
+        yield nodeList.item(index);
+
+        index++;
+      }
+
+      return;
+    }
+
     // field data
     let fieldDataArrays = [];
     if (fieldDataElem) {
       fieldDataArrays = [
-        ...fieldDataElem.getElementsByTagName('DataArray'),
+        ...iterableNodeList(fieldDataElem.getElementsByTagName('DataArray')),
       ].map((daElem) =>
         handleFieldDataArray(
           daElem,
